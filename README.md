@@ -100,7 +100,16 @@ npm run db:reset
 
 ## 제출 전 작성할 내용
 
-이 부분을 본인의 서비스 소개, 변경 파일, 구현 완료 여부, 실행 환경, 알려진 문제, 보고서·검증 증거 링크와 AI 사용 요약으로 바꾸세요. GitHub URL·커밋 SHA를 LMS에 제출하고 보고서 PDF를 저장소 `docs/report.pdf`와 LMS에 같은 버전으로 첨부합니다.
+## 제출 정보
+
+- 학번/이름: 202412863 김원준
+- 서비스: 행사 신청·승인 서비스 (Node.js 24 + Express + node:sqlite + JWT)
+- 구현 완료: TODO-01~04 모두 구현. `npm test` 4/4, `npm run test:assignment` 32/32 통과.
+- 선택 심화(test:advanced): 미수행
+- 변경 파일: `src/application-service.js` (apply/cancel/approve/revoke, 트랜잭션 헬퍼), `src/repository.js` (nextPending 추가). 나머지는 제공 코드.
+- 실행: `npm ci` → `npm test` → `npm start` (http://127.0.0.1:3000). DB 초기화: 서버 종료 후 `npm run db:reset`, RESET 입력.
+- 보고서: `docs/report.pdf`
+- AI 사용: Claude를 사용해 구현 초안·개념 설명·보고서 초안을 받음. 테스트 실행, 화면 검증, 내용 검토는 직접 수행. 자세한 내용은 보고서 7장.
 
 `node_modules`, 생성 DB·서명 키, 실제 `.env`·JWT와 개인 정보는 제출하지 않습니다. 제공 코드와 직접 구현한 부분을 구분합니다.
 
